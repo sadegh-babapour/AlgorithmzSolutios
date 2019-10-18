@@ -1,3 +1,5 @@
+package app;
+
 public class Demo
 {
     public static void main(String[] args)
@@ -19,7 +21,7 @@ public class Demo
         five.setNext(six);
         six.setNext(seven);
         seven.setNext(eight);
-        seven.setNext(nine);
+        eight.setNext(nine);
 
         MyLinkedList chain = new MyLinkedList(one);
 
