@@ -28,7 +28,7 @@ public class MyLinkedList
                 System.out.print(temp.getData() + "-->");
                 temp = temp.getNext();
             }
-            System.out.printf(temp.getData() + "-->null");
+            System.out.printf(temp.getData() + "-->null\n");
         }
     }
 

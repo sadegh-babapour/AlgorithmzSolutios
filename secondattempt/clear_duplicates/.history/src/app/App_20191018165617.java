@@ -14,7 +14,6 @@ public class App {
         Node nine = new Node(88);
         Node ten = new Node(99);
         Node elev = new Node(100);
-        Node twelve = new Node(100);
 
         one.setNext(two);
         two.setNext(three);
@@ -26,16 +25,11 @@ public class App {
         eight.setNext(nine);
         nine.setNext(ten);
         ten.setNext(elev);
-        elev.setNext(twelve);
-        twelve.setNext(new Node(100));
 
         MyLinkedList chain = new MyLinkedList(one);
         chain.display();
-        MyLinkedList noDuplicatez = removeDuplicatesSortedList(chain);
-        System.out.println(
-                "======================================================================");
-        noDuplicatez.display();
     }
+
 
     public static MyLinkedList removeDuplicatesSortedList(MyLinkedList incoming)
     {
@@ -53,23 +47,20 @@ public class App {
             Node fast = incoming.getRoot();
             Node slow = fast;
 
-            while (fast != null && fast.getNext() != null)
+            while (fast != null)
             {
                 slow = fast;
                 fast = fast.getNext();
                 while(fast.getData() == slow.getData())
                 {
-                    if (fast.getNext() == null)
-                    {
-                        slow.setNext(null);
-                        break;
-                    }
                     fast = fast.getNext();
-//                    slow.setNext(fast);
                 }
                 slow.setNext(fast);
             }
             return incoming;
         }
     }
+
+
+    
 }
