@@ -51,24 +51,24 @@ public class App {
         {
             // since this is sorted, we need two pointers
             Node fast = incoming.getRoot();
-            Node slow = fast;
+            Node slow = incoming.getRoot();;
 
-            while (fast != null && fast.getNext() != null)
+            while (fast.getNext() != null)
             {
                 slow = fast;
                 fast = fast.getNext();
-                while(fast.getData() == slow.getData())
+                while(fast.getData() == slow.getData() && fast.getNext() != null)
                 {
-                    if (fast.getNext() == null)
-                    {
-                        slow.setNext(null);
-                        break;
-                    }
                     fast = fast.getNext();
 //                    slow.setNext(fast);
                 }
                 slow.setNext(fast);
             }
+            if (fast.getNext() == null)
+                slow.setNext(null);
+            else
+                slow.setNext(fast);
+
             return incoming;
         }
     }
