@@ -3,6 +3,8 @@ public class Solution
     public static void main(String[] args)
     {
         String input = new String("100,200,+,100,/,17,+,101,*");
+        
+        // (((100+ 200) / 100) + 17 ) * 101 = 2020;
         System.out.println(reversePolish(input));
 
     }
