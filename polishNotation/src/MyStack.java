@@ -75,7 +75,6 @@ public class MyStack
             tempDisplay = temp + "->";
             temp = temp.getNext();
         }
-//        tempDisplay = tempDisplay + "null";
         return tempDisplay;
     }
 

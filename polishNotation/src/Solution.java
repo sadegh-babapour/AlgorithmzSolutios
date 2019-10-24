@@ -1,7 +1,3 @@
-import org.w3c.dom.Node;
-
-import java.util.Arrays;
-
 public class Solution
 {
     public static void main(String[] args)
@@ -23,7 +19,7 @@ public class Solution
             char character = weirdnotation.charAt(i);
 
             String stringOfChar = String.valueOf(character);
-//            System.out.println(stringOfChar);
+
             if (character == ',')
             {
                 tempDigit = "";
@@ -46,8 +42,6 @@ public class Solution
             int second = myStack.pop().getData();
 
             tempSum = 0;
-//            String stringOfChar = String.valueOf(character);
-
             switch (stringOfChar)
             {
                 case "+":
@@ -69,8 +63,6 @@ public class Solution
             }
 
         }
-//            System.out.println(myStack);
-
         }
         return tempSum;
     }
