@@ -12,7 +12,7 @@ public class App {
         DeMoivre fastFibbo = new DeMoivre(45);
         System.out.println(fastFibbo.calculate());
 
-        int n = 777;
+//        int n = 777;
         String one = "1234567890987654321";
         String two = "1357908642";
         LargeInteger yek = new LargeInteger(one);
@@ -23,7 +23,7 @@ public class App {
         System.out.println("==============================================");
         System.out.println(yek.add(doo));
         System.out.println("****************************************");
-        System.out.println(normalFibo(110));
+        System.out.println(normalFibo(23));
 
         // TO DO:
         // implement multiplication to calculate huge fibonaccizzzzz
