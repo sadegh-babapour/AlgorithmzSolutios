@@ -4,7 +4,7 @@
 
 public class Solution
 {
-    public static void main(String[] args)
+    public static void main(String[] args) throws Exception
     {
         Node a01 = new Node(32);
         Node a02 = new Node(16);
@@ -142,8 +142,27 @@ public class Solution
         System.out.println();
         System.out.println("*******************************************");
 
-        System.out.println(tree.theKthSmallest(tree.getTheRoot(),4));
-        System.out.println(tree.theNthLargest(tree.getTheRoot(),4));
+//        System.out.println(tree.theKthSmallest(tree.getTheRoot(),4));
+//        System.out.println(tree.theNthLargest(tree.getTheRoot(),4));
 
+        try
+        {
+            System.out.println(tree.kthSmallestRecursive(tree.getTheRoot(), 4, 0));
+            System.out.println("---------------------------------------------------------");
+        }
+        catch (Exception eee)
+        {
+            System.out.println("================================================");
+        }
+
+        try
+        {
+            System.out.println(tree.kthLargestRecursive(tree.getTheRoot(),4,0));
+//            System.out.println();
+        }
+        catch (Exception fff)
+        {
+            System.out.println();
+        }
     }
 }

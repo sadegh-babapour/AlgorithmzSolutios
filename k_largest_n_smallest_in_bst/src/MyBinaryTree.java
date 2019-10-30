@@ -1,4 +1,3 @@
-import javax.swing.tree.TreeNode;
 import java.util.Stack;
 
 public class MyBinaryTree
@@ -129,8 +128,54 @@ public class MyBinaryTree
 
     }
 
+
+// this works but doesn't terminate when condition is met, uhhhhhhhh :(
+
+    public int kthSmallestRecursive(Node treeRoot, int k, int count) throws Exception
+    {
+
+        if (treeRoot == null)
+        {
+            ++count;
+        } else
+        {
+            count = kthSmallestRecursive(treeRoot.getLeft(), k, count);
+//            System.out.println(treeRoot.toString() + count);
+
+            if (count == k)
+            {
+                System.out.println("The " + k + "th smallest Node:\n" +
+                        treeRoot.toString());
+//                System.exit(0);
+                treeRoot = null;
+            }
+            count = kthSmallestRecursive(treeRoot.getRight(), k, count);
+            return count;
+        }
+        return count;
+    }
+
+
+    public int kthLargestRecursive(Node treeRoot, int k, int count)
+    {
+        if (treeRoot == null)
+        {
+            ++count;
+        }
+        else
+        {
+            count = kthLargestRecursive(treeRoot.getRight(), k, count);
+            if (count == k)
+            {
+                System.out.println("The " + k + "th LARGEST Node:\n" +
+                        treeRoot.toString());
+                treeRoot = null;
+            }
+            count = kthLargestRecursive(treeRoot.getLeft(), k, count);
+            return count;
+        }
+        return count;
+    }
 }
-
-
 
 
