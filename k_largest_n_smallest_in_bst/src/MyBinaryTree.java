@@ -176,6 +176,16 @@ public class MyBinaryTree
         }
         return count;
     }
+
+
+
+    public Node getLargest()
+    {
+        Node cursor = getTheRoot();
+        while (cursor.getRight() != null)
+            cursor = cursor.getRight();
+        return cursor;
+    }
 }
 
 

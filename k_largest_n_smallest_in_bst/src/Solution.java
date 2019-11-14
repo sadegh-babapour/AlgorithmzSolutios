@@ -142,6 +142,11 @@ public class Solution
         System.out.println();
         System.out.println("*******************************************");
 
+        System.out.println();
+
+        System.out.println(tree.getLargest());
+
+
 //        System.out.println(tree.theKthSmallest(tree.getTheRoot(),4));
 //        System.out.println(tree.theNthLargest(tree.getTheRoot(),4));
 
