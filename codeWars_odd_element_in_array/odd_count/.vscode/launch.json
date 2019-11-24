@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - FindOdd",
+            "request": "launch",
+            "mainClass": "app.FindOdd",
+            "projectName": "odd_count"
+        }
+    ]
+}
